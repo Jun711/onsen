@@ -1,0 +1,54 @@
+<ons-page>
+  <ons-toolbar>
+    <div class="left"></div>
+    <div class="center">My library</div>
+    <div class="right">
+      <ons-toolbar-button (click)="add()">Add</ons-toolbar-button>
+    </div>
+  </ons-toolbar>
+  <div class="background"></div>
+  <!-- Background of the page -->
+  <div class="content">
+    <!-- Content of the page -->
+    <!-- <ons-button (click)="goToDoc($event)">Go to doc</ons-button> -->
+    <div class="content page__content">
+      <ons-list>
+        <ons-list-item *onsLazyRepeat="let item of items; let i = index" tappable>
+          <div class="left">
+            <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+          </div>
+          <div class="center">
+            <span class="list-item__title">Cutest kitty</span>
+            <span class="list-item__subtitle">On the Internet</span>
+          </div>
+          <div class="right">
+            <ons-button (click)="goToDoc($event)">Go to doc</ons-button>
+          </div>
+        </ons-list-item>
+      </ons-list>
+    </div>
+    <ons-fab ripple position="right bottom" (click)="onClick()">
+      <ons-icon icon="md-car"></ons-icon>
+    </ons-fab>
+    <!-- <ul class="list">
+      <li class="list-item">
+        <div class="list-item__center">Dog</div>
+      </li>
+      <li class="list-item">
+        <div class="list-item__center">Cat</div>
+      </li>
+      <li class="list-item">
+        <div class="list-item__center">Hamster</div>
+      </li>
+      <li class="list-item">
+        <div class="list-item__center">Dog</div>
+      </li>
+      <li class="list-item">
+        <div class="list-item__center">Cat</div>
+      </li>
+      <li class="list-item">
+        <div class="list-item__center">Hamster</div>
+      </li>
+    </ul> -->
+  </div>
+</ons-page>
