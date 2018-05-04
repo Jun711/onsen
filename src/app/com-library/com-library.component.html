@@ -4,6 +4,7 @@
     <div class="center">My library</div>
     <div class="right">
       <ons-toolbar-button (click)="add()">Add</ons-toolbar-button>
+      <ons-toolbar-button (click)="switch()">Switch View</ons-toolbar-button>
     </div>
   </ons-toolbar>
   <div class="background"></div>
@@ -12,7 +13,7 @@
     <!-- Content of the page -->
     <!-- <ons-button (click)="goToDoc($event)">Go to doc</ons-button> -->
     <div class="content page__content">
-      <ons-list>
+      <ons-list *ngIf="!gridView">
         <ons-list-item *onsLazyRepeat="let item of items; let i = index" tappable>
           <div class="left">
             <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
@@ -22,12 +23,25 @@
             <span class="list-item__subtitle">On the Internet</span>
           </div>
           <div class="right">
-            <ons-button (click)="goToDoc($event)">Go to doc</ons-button>
+            <ons-button modifier="light" (click)="goToDoc($event)">Go to doc</ons-button>
           </div>
         </ons-list-item>
       </ons-list>
+
+      <ons-list *ngIf="gridView">
+        <ons-list-item *onsLazyRepeat="let item of items; let i = index" tappable>
+          <ons-row>
+            <ons-col>
+              <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+            </ons-col>
+            <ons-col>
+              <img class="list-item__thumbnail" src="http://placekitten.com/g/40/40">
+            </ons-col>
+          </ons-row>
+        </ons-list-item>
+      </ons-list>
     </div>
-    <ons-fab ripple position="right bottom" (click)="onClick()">
+    <ons-fab ripple position="right bottom" (click)="add()">
       <ons-icon icon="md-car"></ons-icon>
     </ons-fab>
     <!-- <ul class="list">

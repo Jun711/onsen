@@ -9,12 +9,13 @@ import {
 } from 'ngx-onsenui';
 
 @Component({
-  selector: 'app-com-document',
-  templateUrl: './com-document.component.html',
-  styleUrls: ['./com-document.component.scss']
+  selector: 'app-com-library',
+  templateUrl: './com-library.component.html',
+  styleUrls: ['./com-library.component.scss']
 })
-export class ComDocumentComponent implements OnInit {
+export class ComLibraryComponent implements OnInit {
   public items: any[] = [];
+  public gridView = false;
   @ViewChild(OnsLazyRepeat) lazyRepeat;
 
   constructor() {
@@ -33,5 +34,9 @@ export class ComDocumentComponent implements OnInit {
       msg: 'Bonjour!'
     });
     this.lazyRepeat.refresh();
+  }
+
+  switch() {
+    this.gridView = !this.gridView;
   }
 }

@@ -5,19 +5,19 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { AppComponent } from './app.component';
 
-import { ComDocumentComponent } from './com-document/com-document.component';
+import { ComLibraryComponent } from './com-library/com-library.component';
 
 export const appRoutes: Routes = [
   {
     path: 'doc',
-    component: ComDocumentComponent
+    component: ComLibraryComponent
   },
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComDocumentComponent,
+    ComLibraryComponent,
   ],
   imports: [
     BrowserModule,

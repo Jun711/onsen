@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComDocumentComponent } from './com-document.component';
+import { ComLibraryComponent } from './com-library.component';
 
-describe('ComDocumentComponent', () => {
-  let component: ComDocumentComponent;
-  let fixture: ComponentFixture<ComDocumentComponent>;
+describe('ComLibraryComponent', () => {
+  let component: ComLibraryComponent;
+  let fixture: ComponentFixture<ComLibraryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ComDocumentComponent ]
+      declarations: [ ComLibraryComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ComDocumentComponent);
+    fixture = TestBed.createComponent(ComLibraryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
